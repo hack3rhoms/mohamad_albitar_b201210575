@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <script src="js/contact.js"></script>
+    <title>Communication</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a href="index.html#intro" class="navbar-brand">
+                    <img src="photo/logo.jpg" alt="logo" style="max-width: 2em;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="cv.html" class="nav-link">
+                                Resume
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="MyCity.html" class="nav-link">
+                                my city
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="culture.html" class="nav-link">
+                                our legacy
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="myinterests.html" class="nav-link">
+                                My interests
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="Contact.html" class="nav-link">
+                                Communication
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="Login.html" class="nav-link">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form name="form" action="submitted.php" onsubmit="validateForm()" method="POST">
+                <fieldset>
+                    <legend>Your contact information: </legend>
+                    <div class="form_item">
+                        <label class="form-lable" for="name">Name</label>
+                        <input class="form-control" type="text" name="name" id="name">
+                    </div>
+                    <!-- Name -->
+                    <div class="form_item">
+                        <label class="form-lable" for="email">Email</label>
+                        <input class="form-control" type="text" name="email" id="email">
+                    </div>
+                    <!-- Email -->
+                    <div class="form_item">
+                        <label class="form-lable" for="gender">Gender</label>
+                        <select class="form-select" id="gender" name="gender">
+                            <option value="female">female</option>
+                            <option value="male">male</option>
+                            <option value="other" selected>I do not want to say</option>
+                        </select>
+                    </div>
+                    <!-- Gender -->
+                </fieldset>
+                <!-- Contact Info -->
+                <fieldset>
+                    <legend>Problem: </legend>
+                    <div class="form_item">
+                        <label class="form-lable" for="contact_reason">Contact reason</label>
+                        <input class="form-select" id="contact_reason" name="reason" list="reasons">
+                        <datalist id="reasons">
+                            <option value="report a fault"></option>
+                            <option value="report a typo"></option>
+                            <option value="Suggest a feature"></option>
+                            <option value="suggest an idea"></option>
+                            <option value="other"></option>
+                        </datalist>
+                    </div>
+                    <!-- Contact reason -->
+                    <div class="form_item">
+                        <label class="form-lable" for="details">Details</label>
+                        <textarea class="form-control" name="details" id="details"></textarea>
+                    </div>
+                </fieldset>
+                <!-- Sourn -->
+                <div class="form_item d-flex justify-content-end gap-3">
+                    <button class="btn btn-danger btn-secondary px-4" type="button" name="erase"
+                        onclick="eraseForm()">delete</button>
+                    <button class="btn btn-primary px-4" type="submit" name="send">Send</button>
+                </div>
+                <!-- Buttons -->
+            </form>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
