@@ -91,6 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 <?php
                     if (isset($_POST['email']) && isset($_POST['password'])) {
                         echo "Hoşgeldiniz, " . htmlspecialchars($_POST['password'], ENT_QUOTES, 'utf-8');
+                    }else{
+                        echo "emil yanlış";
                     }
                 ?>
             </div>
